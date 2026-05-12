@@ -1,0 +1,45 @@
+// swift-tools-version: 6.2
+
+// © 2025–2026 John Gary Pusey (see LICENSE.md)
+
+import PackageDescription
+
+let swiftSettings: [SwiftSetting] = [.defaultIsolation(nil),
+                                     .enableUpcomingFeature("ExistentialAny"),
+                                     .enableUpcomingFeature("ImmutableWeakCaptures"),
+                                     .enableUpcomingFeature("InferIsolatedConformances"),
+                                     .enableUpcomingFeature("InternalImportsByDefault"),
+                                     .enableUpcomingFeature("MemberImportVisibility"),
+                                     .enableUpcomingFeature("NonisolatedNonsendingByDefault")]
+
+let package = Package(name: "IvorDump",
+                      platforms: [.iOS(.v18),
+                                  .macOS(.v15)],
+                      products: [.executable(name: "ivordump",
+                                             targets: ["IvorDump"])],
+                      dependencies: [.package(path: "../IvorABC"),
+                                     .package(path: "../IvorGuido"),
+                                     .package(path: "../IvorJohnnySonic"),
+                                     .package(path: "../IvorMIDI"),
+                                     .package(path: "../IvorMusicXML"),
+                                     .package(url: "https://github.com/eBardX/XestiText.git",
+                                              .upToNextMajor(from: "4.0.0")),
+                                     .package(url: "https://github.com/eBardX/XestiTools.git",
+                                              .upToNextMajor(from: "7.2.0"))],
+                      targets: [.executableTarget(name: "IvorDump",
+                                                  dependencies: [.product(name: "IvorABC",
+                                                                          package: "IvorABC"),
+                                                                 .product(name: "IvorGuido",
+                                                                          package: "IvorGuido"),
+                                                                 .product(name: "IvorJohnnySonic",
+                                                                          package: "IvorJohnnySonic"),
+                                                                 .product(name: "IvorMIDI",
+                                                                          package: "IvorMIDI"),
+                                                                 .product(name: "IvorMusicXML",
+                                                                          package: "IvorMusicXML"),
+                                                                 .product(name: "XestiText",
+                                                                          package: "XestiText"),
+                                                                 .product(name: "XestiTools",
+                                                                          package: "XestiTools")],
+                                                  swiftSettings: swiftSettings)],
+                      swiftLanguageModes: [.v6])
