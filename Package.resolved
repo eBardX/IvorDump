@@ -1,6 +1,51 @@
 {
-  "originHash" : "bf5f946841d4e836406baee615cf767dfc910fd5c63531b957ed94d0993b0f00",
+  "originHash" : "6a2d6d5ad2e0b02000460f26344e4e6a97a0ed9f37ee636f55269e86e7cff6ca",
   "pins" : [
+    {
+      "identity" : "ivorabc",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eBardX/IvorABC.git",
+      "state" : {
+        "revision" : "fce7ef5655849f836a178686f52f09c5e57badc2",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "ivorguido",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eBardX/IvorGuido.git",
+      "state" : {
+        "revision" : "8f8abe9edb08cf3f41f16a99e552f3e26974900a",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "ivorjohnnysonic",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eBardX/IvorJohnnySonic.git",
+      "state" : {
+        "revision" : "aa106f4f147d0b9932b59db7eb41860bc4920d47",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "ivormidi",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eBardX/IvorMIDI.git",
+      "state" : {
+        "revision" : "a7d297127447fedb75d5e816554b8e5bc56fe515",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "ivormusicxml",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eBardX/IvorMusicXML.git",
+      "state" : {
+        "revision" : "f64f8f18673ddf8a96eaaa52e5f994d06b930c61",
+        "version" : "1.0.0"
+      }
+    },
     {
       "identity" : "swift-argument-parser",
       "kind" : "remoteSourceControl",
