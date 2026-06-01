@@ -1,5 +1,5 @@
 {
-  "originHash" : "6a2d6d5ad2e0b02000460f26344e4e6a97a0ed9f37ee636f55269e86e7cff6ca",
+  "originHash" : "46039b4010029337e688cf1ffba967d049fd2089103d9787c41b1f78a492e4b7",
   "pins" : [
     {
       "identity" : "ivorabc",
@@ -24,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/eBardX/IvorJohnnySonic.git",
       "state" : {
-        "revision" : "aa106f4f147d0b9932b59db7eb41860bc4920d47",
-        "version" : "1.0.0"
+        "revision" : "f9dba34b8816076c536451ece0c817e6d309c522",
+        "version" : "2.0.0"
       }
     },
     {
@@ -33,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/eBardX/IvorMIDI.git",
       "state" : {
-        "revision" : "a7d297127447fedb75d5e816554b8e5bc56fe515",
-        "version" : "1.0.0"
+        "revision" : "a62b5eda6fcce4f18f895caba0a947921c1a8b29",
+        "version" : "1.1.0"
       }
     },
     {
@@ -51,8 +51,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-argument-parser.git",
       "state" : {
-        "revision" : "626b5b7b2f45e1b0b1c6f4a309296d1d21d7311b",
-        "version" : "1.7.1"
+        "revision" : "ca37474853a4b5f59a22c74bfdd449b1f6bc4cc2",
+        "version" : "1.8.1"
       }
     },
     {
@@ -78,8 +78,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/eBardX/XestiTools.git",
       "state" : {
-        "revision" : "ca57209e8adf03b22828c9c8d169ce70a845c573",
-        "version" : "7.4.1"
+        "revision" : "1a1417690e7e2d0b33c4def0c601c6adcb2b98ed",
+        "version" : "7.4.2"
       }
     },
     {
