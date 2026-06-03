@@ -382,7 +382,7 @@ extension IvorDumper {
         return result
     }
 
-    private func _format(_ message: SMFMetaMessage) -> String {
+    private func _format(_ message: SMFMetaMessage) -> String { // swiftlint:disable:this function_body_length
         var result = ""
 
         switch message {
@@ -439,6 +439,36 @@ extension IvorDumper {
             result += spacer()
             result += _format(text)
 
+        case let .reservedTextA(text):
+            result += "Reserved text (0x0a)"
+            result += spacer()
+            result += _format(text)
+
+        case let .reservedTextB(text):
+            result += "Reserved text (0x0b)"
+            result += spacer()
+            result += _format(text)
+
+        case let .reservedTextC(text):
+            result += "Reserved text (0x0c)"
+            result += spacer()
+            result += _format(text)
+
+        case let .reservedTextD(text):
+            result += "Reserved text (0x0d)"
+            result += spacer()
+            result += _format(text)
+
+        case let .reservedTextE(text):
+            result += "Reserved text (0x0e)"
+            result += spacer()
+            result += _format(text)
+
+        case let .reservedTextF(text):
+            result += "Reserved text (0x0f)"
+            result += spacer()
+            result += _format(text)
+
         case let .sequenceNumber(seqNum):
             result += "Sequence number"
             result += spacer()
@@ -474,6 +504,11 @@ extension IvorDumper {
             result += "Time signature"
             result += spacer()
             result += _format(timeSignature)
+
+        case let .unknown(typeByte, bytes):
+            result += String(format: "Unknown (0x%02x)", typeByte)
+            result += spacer()
+            result += bytes.hex
         }
 
         return result
