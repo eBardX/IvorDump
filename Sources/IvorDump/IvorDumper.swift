@@ -1,65 +1,79 @@
 // © 2025–2026 John Gary Pusey (see LICENSE.md)
 
 public import Foundation
-public import XestiTools
 
+internal import XestiTools
+
+/// A dumper of human-readable output for any recognized music notation file format.
 public struct IvorDumper {
 
     // MARK: Public Initializers
 
-    public init(stdio: StandardIO) {
-        self.stdio = stdio
+    /// Creates a new dumper.
+    public init() {
+        self.stdio = StandardIO()
     }
 
-    // MARK: Public Methods
+    // MARK: Internal Instance Properties
 
-    public func dump(_ fileURL: URL) throws {
-        do {
-            switch fileURL.pathExtension {
-            case "abc":
-                try dumpABC(fileURL)
-
-            case "dkm",
-                 "johnnysonic":
-                try dumpJohnnySonic(fileURL)
-
-            case "gmn":
-                try dumpGuido(fileURL)
-
-            case "mid",
-                 "midi",
-                 "smf":
-                try dumpMIDI(fileURL)
-
-            case "musicxml",
-                 "mxl",
-                 "xml":
-                try dumpMusicXML(fileURL)
-
-            default:
-                emitError("Unrecognized file format: “\(fileURL.path)”")
-            }
-        } catch let error as any EnhancedError {
-            emitError(error.message)
-        }
-    }
-
-    // MARK: Private Instance Properties
-
-    private let stdio: StandardIO
+    internal let stdio: StandardIO
 }
 
 // MARK: -
 
 extension IvorDumper {
 
-    // MARK: Internal Instance Methods
+    // MARK: Public Instance Methods
 
-    internal func emit(_ line: String = "") {
-        stdio.writeOutput(line)
-    }
+    /// Dumps the contents of the specified file.
+    ///
+    /// - Parameter fileURL: The URL of the file to dump.
+    ///
+    /// - Returns: `true` if the file was dumped successfully; otherwise, `false`. Any error encountered is written to
+    ///            standard error rather than thrown, so that a multi-file run can continue past a bad file.
+    /// - Throws: ``IvorDumper/Error/dumpFailure(_:)``.
+    @discardableResult
+    public func dump(_ fileURL: URL) throws(Error) -> Bool {
+        do {
+            switch fileURL.pathExtension {
+            case "abc":
+                try ABCDumper(stdio).dump(fileURL)
 
-    internal func emitError(_ message: String) {
-        stdio.writeError(message)
+            case "dkm",
+                 "johnnysonic":
+                try DKMDumper(stdio).dump(fileURL)
+
+            case "gmn":
+                try GMNDumper(stdio).dump(fileURL)
+
+            case "mid",
+                 "midi",
+                 "smf":
+                try SMFDumper(stdio).dump(fileURL)
+
+            case "musicxml",
+                 "mxl",
+                 "xml":
+                try MXLDumper(stdio).dump(fileURL)
+
+            default:
+                emitError("Unrecognized file format: “\(fileURL.path)”")
+
+                return false
+            }
+
+            return true
+        } catch let error as any EnhancedError {
+            emitError(error.message)
+
+            return false
+        } catch {
+            throw Error.dumpFailure(error as NSError)
+        }
     }
+}
+
+// MARK: - Dumper
+
+extension IvorDumper: Dumper {
 }

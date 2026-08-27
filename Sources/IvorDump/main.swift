@@ -1,15 +1,19 @@
 // © 2025–2026 John Gary Pusey (see LICENSE.md)
 
-import Foundation
-import XestiTools
+internal import Foundation
+internal import XestiTools
 
-let args = Array(CommandLine.arguments.dropFirst())
-let stdio = StandardIO()
-let dumper = IvorDumper(stdio: stdio)
+internal let args = Array(CommandLine.arguments.dropFirst())
 
 guard !args.isEmpty
-else { stdio.writeError("Usage: ivordump <file-path>…"); exit(1) }
+else { StandardIO().writeError("Usage: ivordump <file-path>…"); exit(1) }
+
+internal let dumper = IvorDumper()
+
+internal var succeeded = true
 
 for arg in args {
-    try dumper.dump(URL(fileURLWithPath: arg).absoluteURL)
+    succeeded = try dumper.dump(URL(fileURLWithPath: arg).absoluteURL) && succeeded
 }
+
+exit(succeeded ? EXIT_SUCCESS : EXIT_FAILURE)

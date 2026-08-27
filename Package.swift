@@ -1,4 +1,4 @@
-// swift-tools-version: 6.2
+// swift-tools-version: 6.3
 
 // © 2025–2026 John Gary Pusey (see LICENSE.md)
 
@@ -18,19 +18,19 @@ let package = Package(name: "IvorDump",
                       products: [.executable(name: "ivordump",
                                              targets: ["IvorDump"])],
                       dependencies: [.package(url: "https://github.com/eBardX/IvorABC.git",
-                                              .upToNextMajor(from: "1.0.0")),
+                                              branch: "v2-main"),
                                      .package(url: "https://github.com/eBardX/IvorGuido.git",
-                                              .upToNextMajor(from: "1.0.0")),
+                                              branch: "v2-main"),
                                      .package(url: "https://github.com/eBardX/IvorJohnnySonic.git",
-                                              .upToNextMajor(from: "2.0.0")),
+                                              branch: "v3-main"),
                                      .package(url: "https://github.com/eBardX/IvorMIDI.git",
-                                              .upToNextMajor(from: "1.2.0")),
+                                              branch: "v2-main"),
                                      .package(url: "https://github.com/eBardX/IvorMusicXML.git",
-                                              .upToNextMajor(from: "1.0.0")),
+                                              branch: "v2-main"),
                                      .package(url: "https://github.com/eBardX/XestiText.git",
                                               .upToNextMajor(from: "4.0.0")),
                                      .package(url: "https://github.com/eBardX/XestiTools.git",
-                                              .upToNextMajor(from: "7.4.0"))],
+                                              .upToNextMajor(from: "9.1.0"))],
                       targets: [.executableTarget(name: "IvorDump",
                                                   dependencies: [.product(name: "IvorABC",
                                                                           package: "IvorABC"),
