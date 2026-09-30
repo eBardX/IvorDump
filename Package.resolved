@@ -1,0 +1,150 @@
+{
+  "originHash" : "dad840b3f6d3429f20a530ab3698f9cf6b4c900765a787fabe590f3970794feb",
+  "pins" : [
+    {
+      "identity" : "bigint",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/attaswift/BigInt.git",
+      "state" : {
+        "revision" : "63feef7820abb1a8fb08587d7da56bb0b7db8751",
+        "version" : "6.0.1"
+      }
+    },
+    {
+      "identity" : "ivorabc",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eBardX/IvorABC.git",
+      "state" : {
+        "branch" : "v2-main",
+        "revision" : "21e8c1977702382474386077d471bc5c743d3f1b"
+      }
+    },
+    {
+      "identity" : "ivorguido",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eBardX/IvorGMN.git",
+      "state" : {
+        "branch" : "v2-main",
+        "revision" : "339cd20377874883af76400987fa8f7504fbd9ac"
+      }
+    },
+    {
+      "identity" : "ivorjohnnysonic",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eBardX/IvorDKM.git",
+      "state" : {
+        "branch" : "v3-main",
+        "revision" : "6f2d7a2dfdd988c8cd3361713e536d22789dc592"
+      }
+    },
+    {
+      "identity" : "ivormidi",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eBardX/IvorMIDI.git",
+      "state" : {
+        "branch" : "v2-main",
+        "revision" : "2994b12e62d0cb20626e1d910c9de98f14669b43"
+      }
+    },
+    {
+      "identity" : "ivormusicxml",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eBardX/IvorMXL.git",
+      "state" : {
+        "branch" : "v2-main",
+        "revision" : "92d7684a6e396309961c315d9b7720351a41f22f"
+      }
+    },
+    {
+      "identity" : "ivorsmf",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eBardX/IvorSMF.git",
+      "state" : {
+        "branch" : "develop",
+        "revision" : "01f165dc0f580465297d842a21c53550adff7e5b"
+      }
+    },
+    {
+      "identity" : "ivorsmpte",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eBardX/IvorSMPTE.git",
+      "state" : {
+        "branch" : "develop",
+        "revision" : "b1c4593b5917807c5cdc0a5eeeb19fac0655b5ac"
+      }
+    },
+    {
+      "identity" : "swift-numerics",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-numerics",
+      "state" : {
+        "revision" : "0c0290ff6b24942dadb83a929ffaaa1481df04a2",
+        "version" : "1.1.1"
+      }
+    },
+    {
+      "identity" : "xestiarchive",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eBardX/XestiArchive.git",
+      "state" : {
+        "revision" : "6358ab1b0c8f04b7b77b3fa8caf6eb96e779581c",
+        "version" : "1.1.1"
+      }
+    },
+    {
+      "identity" : "xestinumbers",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eBardX/XestiNumbers.git",
+      "state" : {
+        "revision" : "1df695e1a3fcc8f553c273b6231032a12386eecb",
+        "version" : "1.3.1"
+      }
+    },
+    {
+      "identity" : "xestitext",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eBardX/XestiText.git",
+      "state" : {
+        "revision" : "b29e91eb2e8f46f696baa6bea1ee5bcf6fe963f1",
+        "version" : "4.0.5"
+      }
+    },
+    {
+      "identity" : "xestitokens",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eBardX/XestiTokens.git",
+      "state" : {
+        "revision" : "adb957ab970638ddfff78f4a32057ca257f7ae8a",
+        "version" : "2.0.1"
+      }
+    },
+    {
+      "identity" : "xestitools",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eBardX/XestiTools.git",
+      "state" : {
+        "revision" : "35a4c43dde224aadcadad66dac7a35104537694d",
+        "version" : "10.0.0"
+      }
+    },
+    {
+      "identity" : "xestixml",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eBardX/XestiXML.git",
+      "state" : {
+        "revision" : "926bf94eefd0bb0499bb8c5ff08828b56711073b",
+        "version" : "5.0.1"
+      }
+    },
+    {
+      "identity" : "zipfoundation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/weichsel/ZIPFoundation.git",
+      "state" : {
+        "revision" : "22787ffb59de99e5dc1fbfe80b19c97a904ad48d",
+        "version" : "0.9.20"
+      }
+    }
+  ],
+  "version" : 3
+}
