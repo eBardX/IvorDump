@@ -100,10 +100,10 @@ extension SMFDumper {
             result += spacer()
             result += format(seqNum)
 
-        case let .sequencerSpecific(bytes):
+        case let .sequencerSpecific(message):
             result += "Sequencer-specific"
             result += spacer()
-            result += format(bytes)
+            result += format(message.bytesValue ?? [])
 
         case let .sequenceTrackName(text):
             result += "Sequence/track name"

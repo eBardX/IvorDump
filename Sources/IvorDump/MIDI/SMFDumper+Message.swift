@@ -72,6 +72,13 @@ extension SMFDumper {
         var result = ""
 
         switch message {
+        case let .continuation(bytes):
+            result += "System exclusive continuation"
+            result += spacer()
+            result += format(bytes.count, "byte")
+
+            return (result, bytes)
+
         case let .escape(bytes):
             result += "Escape"
             result += spacer()
@@ -86,6 +93,10 @@ extension SMFDumper {
 
             return (result, bytes)
         }
+    }
+
+    internal func format(_ program: MIDIProgram) -> String {
+        format(program.uintValue)
     }
 
     internal func format(_ value: MIDIData1Value) -> String {
