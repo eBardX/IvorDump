@@ -1,5 +1,5 @@
 {
-  "originHash" : "015c28eedaf093d5f79271d654c1006f71bc7bd4a4e6c679daf75c6251a9fc94",
+  "originHash" : "4514b3905951055a8c7227fb146f2c472d397e3945448a51cc576bc455c3516e",
   "pins" : [
     {
       "identity" : "bigint",
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/eBardX/IvorABC.git",
       "state" : {
-        "revision" : "dca5802491341ce0f0ac513e38c3d6924483d0ad",
-        "version" : "0.1.0"
+        "revision" : "1a74f2a83d8ebf18654e0c239a58f58b4e00d379",
+        "version" : "0.1.2"
       }
     },
     {
@@ -51,8 +51,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/eBardX/IvorMXL.git",
       "state" : {
-        "revision" : "f005826b9ff2370878cbf544b3d78cda484d990b",
-        "version" : "0.1.0"
+        "revision" : "ce6aea1b9c8d297764d300e3832bac0c6549fae6",
+        "version" : "0.3.0"
       }
     },
     {
@@ -60,8 +60,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/eBardX/IvorSMF.git",
       "state" : {
-        "revision" : "d0a9ebbe9a1b7c87b55b77116eab2e3bfba56254",
-        "version" : "0.5.0"
+        "revision" : "650e6e576bbef09c181876d56e1ddcbb58ad2e95",
+        "version" : "0.6.0"
       }
     },
     {

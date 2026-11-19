@@ -278,10 +278,10 @@ extension SMFDumper {
         result += "/"
         result += format(1 << timeSignature.denominator)
         result += spacer()
-        result += format(timeSignature.clockRate, "clock")
+        result += format(timeSignature.clocksPerClick, "clock")
         result += "/click"
         result += spacer()
-        result += format(timeSignature.beatRate, "32nd-note")
+        result += format(timeSignature.thirtySecondsPerQuarter, "32nd-note")
         result += "/quarter-note"
 
         return result

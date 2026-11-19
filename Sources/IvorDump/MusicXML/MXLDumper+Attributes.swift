@@ -172,17 +172,24 @@ extension MXLDumper {
 
     private func _format(_ content: MXLKey.Content) -> String {
         switch content {
-        case let .nonTraditionalKey(key):
-            var result = format(key.step)
+        case let .nonTraditionalKey(keys):
+            var result = ""
 
-            result += formatAlter(key.alter)
-
-            if let accidental = key.accidental {
-                result += format(accidental.value)
-
-                if let smufl = accidental.smufl {
+            for key in keys {
+                if !result.isEmpty {
                     result += spacer()
-                    result += format(smufl.stringValue)
+                }
+
+                result += format(key.step)
+                result += formatAlter(key.alter)
+
+                if let accidental = key.accidental {
+                    result += format(accidental.value)
+
+                    if let smufl = accidental.smufl {
+                        result += spacer()
+                        result += format(smufl.stringValue)
+                    }
                 }
             }
 
